@@ -43,22 +43,19 @@ st.dataframe(df_cleaned)
 
 # Visualisasi distribusi berat produk per kategori
 st.subheader('Distribusi Berat Produk per Kategori')
-fig, ax = plt.subplots(figsize=(10,6))
-sns.boxplot(x='product_category_name', y='product_weight_g', data=df_cleaned, ax=ax)
-plt.xticks(rotation=90)
-st.pyplot(fig)
+sns.set_style("whitegrid")
+sns.boxplot(x='product_category_name', y='product_weight_g', data=df_cleaned)
+st.pyplot()
 
 # Visualisasi Panjang Deskripsi Produk vs Berat Produk
 st.subheader('Panjang Deskripsi Produk vs Berat Produk')
-fig, ax = plt.subplots(figsize=(10,6))
-sns.scatterplot(x='product_description_length', y='product_weight_g', hue='product_category_name', data=df_cleaned, ax=ax)
-st.pyplot(fig)
+sns.scatterplot(x='product_description_length', y='product_weight_g', hue='product_category_name', data=df_cleaned)
+st.pyplot()
 
 # Visualisasi Jumlah Foto Produk vs Berat Produk
 st.subheader('Jumlah Foto Produk vs Berat Produk')
-fig, ax = plt.subplots(figsize=(10,6))
-sns.scatterplot(x='product_photos_qty', y='product_weight_g', hue='product_category_name', data=df_cleaned, ax=ax)
-st.pyplot(fig)
+sns.scatterplot(x='product_photos_qty', y='product_weight_g', hue='product_category_name', data=df_cleaned)
+st.pyplot()
 
 # Data Wrangling Section
 st.header('Data Wrangling')
@@ -99,17 +96,13 @@ st.header('Exploratory Data Analysis (EDA)')
 
 # Histogram berat produk
 st.subheader('Distribusi Berat Produk')
-fig, ax = plt.subplots(figsize=(10,6))
-sns.histplot(df_cleaned['product_weight_g'], bins=30, kde=True, ax=ax)
-plt.title('Distribusi Berat Produk')
-st.pyplot(fig)
+sns.histplot(df_cleaned['product_weight_g'], bins=30, kde=True)
+st.pyplot()
 
 # Boxplot berat produk
 st.subheader('Boxplot Berat Produk')
-fig, ax = plt.subplots(figsize=(8,6))
-sns.boxplot(x=df_cleaned['product_weight_g'], ax=ax)
-plt.title('Boxplot Berat Produk')
-st.pyplot(fig)
+sns.boxplot(x=df_cleaned['product_weight_g'])
+st.pyplot()
 
 # Kesimpulan
 st.header('Kesimpulan')
