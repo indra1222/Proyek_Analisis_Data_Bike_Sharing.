@@ -1,5 +1,4 @@
 import streamlit as st
-import pandas as pd
 
 # Tambahkan detail nama, email, dan ID Dicoding
 st.markdown("""
