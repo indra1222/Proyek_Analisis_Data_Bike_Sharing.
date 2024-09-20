@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
 
 # Tambahkan detail nama, email, dan ID Dicoding
 st.markdown("""
