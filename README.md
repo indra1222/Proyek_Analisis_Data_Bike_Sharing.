@@ -1,5 +1,3 @@
-Berikut adalah contoh **README** untuk proyek Streamlit yang sudah Anda buat:
-
 ---
 
 # Proyek Analisis Data: E-Commerce Public Dataset 📊
