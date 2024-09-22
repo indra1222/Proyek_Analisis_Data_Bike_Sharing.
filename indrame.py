@@ -40,11 +40,12 @@ st.markdown("""
 ## Data Wrangling
 
 ### Gathering Data
-# Upload the dataset via Streamlit file uploader
-uploaded_file = st.file_uploader("Upload sellers_dataset.csv", type="csv")
+# Dataset path (update with the actual file path)
+file_path = '/mnt/data/sellers_dataset.csv'
 
-if uploaded_file is not None:
-    data_penjual = pd.read_csv(uploaded_file)
+try:
+    # Load the dataset
+    data_penjual = pd.read_csv(file_path)
 
     # Display the dataset
     st.write("Data Penjual:")
@@ -123,3 +124,6 @@ if uploaded_file is not None:
     - Sebaran penjual berdasarkan kota menunjukkan sebagian besar penjual berada di kota besar seperti Sao Paulo dan Rio de Janeiro.
     - Sao Paulo mendominasi sebagai kota dengan jumlah penjual terbanyak.
     """)
+
+except FileNotFoundError:
+    st.error("File dataset tidak ditemukan. Pastikan file berada pada jalur yang benar.")
