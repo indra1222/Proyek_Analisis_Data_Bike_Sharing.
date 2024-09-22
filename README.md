@@ -8,7 +8,7 @@ Proyek ini merupakan dashboard interaktif yang dibuat menggunakan **Streamlit** 
 - **Nama:** Indra Mauludani Efendi
 - **Email:** indramauludani09@gmail.com
 - **ID Dicoding:** indramauludani14
-- ** streamlit :** https://proyeke-commercepublicdataset-tyfvuaglmp7h4i9nyjoiyr.streamlit.app/
+- **streamlit :** https://proyeke-commercepublicdataset-tyfvuaglmp7h4i9nyjoiyr.streamlit.app/
 
 ### Pertanyaan Bisnis
 1. Apa saja kategori yang memiliki rata-rata produk terberat, dan seberapa besar pengaruh dimensi produk terhadap bobotnya?
