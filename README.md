@@ -72,15 +72,14 @@ Aplikasi akan berjalan di browser dan bisa diakses melalui URL yang ditampilkan 
 ```plaintext
 proyek_ecommerce/
 │
-├── indrame.py             # File utama aplikasi Streamlit
+├── Dashboard.py             # File utama aplikasi Streamlit
 ├── README.md              # File ini
 ├── requirements.txt       # Daftar dependensi Python
-└── data/                  # Folder untuk menyimpan dataset (opsional)
+└── sellers_dataset.csv/   # Folder untuk menyimpan dataset (opsional)
+└── Proyek_Analisis_Data
 ```
 
 ## Lisensi
 Proyek ini tidak memiliki lisensi dan digunakan untuk keperluan edukasi.
 
 --- 
-
-Silakan sesuaikan lebih lanjut sesuai dengan kebutuhan dan spesifikasi proyek Anda.
