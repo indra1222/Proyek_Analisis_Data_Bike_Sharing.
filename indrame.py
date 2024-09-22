@@ -41,7 +41,7 @@ st.markdown("""
 
 ### Gathering Data
 # Dataset path (update with the actual file path)
-file_path = '/mnt/data/sellers_dataset.csv'
+file_path = 'sellers_dataset.csv'
 
 try:
     # Load the dataset
