@@ -20,6 +20,13 @@ st.markdown("""
 order_items_clean = pd.read_csv('order_items_dataset.csv')  # Sesuaikan jalur dataset
 order_payments_clean = pd.read_csv('order_payments_dataset.csv')  # Sesuaikan jalur dataset
 
+# Menampilkan kedua dataset
+st.subheader("Dataset Order Items")
+st.dataframe(order_items_clean)
+
+st.subheader("Dataset Order Payments")
+st.dataframe(order_payments_clean)
+
 # Sidebar untuk memilih analisis
 st.sidebar.header('Pilih Analisis')
 show_correlation = st.sidebar.checkbox('Korelasi antara Harga dan Biaya Pengiriman')
@@ -83,20 +90,3 @@ if show_payment_distribution:
     - Dari segi nilai transaksi, kartu kredit juga digunakan untuk pembelian dengan nilai lebih tinggi dibandingkan metode lainnya. Hal ini mengindikasikan bahwa pelanggan cenderung lebih nyaman menggunakan kartu kredit untuk transaksi bernilai besar karena fleksibilitas yang ditawarkan (misalnya, cicilan).
     - Pemahaman ini dapat digunakan untuk strategi promosi, di mana perusahaan dapat memberikan insentif atau penawaran khusus bagi pengguna kartu kredit untuk meningkatkan pembelian bernilai tinggi.
     """)
-
-# Menampilkan statistik deskriptif dari dataset
-if st.sidebar.checkbox('Tampilkan Statistik Deskriptif'):
-    st.subheader('Statistik Deskriptif')
-    
-    st.write('Statistik Deskriptif untuk Order Items:')
-    st.dataframe(order_items_clean.describe())
-    
-    st.write('Statistik Deskriptif untuk Order Payments:')
-    st.dataframe(order_payments_clean.describe())
-
-# Menampilkan kesimpulan
-st.subheader("Kesimpulan")
-st.markdown("""
-1. **Harga Produk vs Biaya Pengiriman:** Terdapat korelasi positif yang kuat antara harga produk dan biaya pengiriman. Produk dengan harga lebih tinggi cenderung memiliki biaya pengiriman yang lebih tinggi, kemungkinan karena faktor seperti ukuran produk atau penanganan khusus.
-2. **Preferensi Metode Pembayaran:** Kartu kredit adalah metode pembayaran yang paling sering digunakan, terutama untuk transaksi bernilai tinggi. Ini menunjukkan bahwa strategi promosi yang ditargetkan pada pengguna kartu kredit dapat meningkatkan pembelian bernilai besar.
-""")
