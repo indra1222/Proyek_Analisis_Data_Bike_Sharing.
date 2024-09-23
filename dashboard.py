@@ -43,7 +43,12 @@ if show_correlation:
     st.pyplot(plt)
 
     # Insight
-    st.markdown(f"**Insight:** Korelasi antara harga produk dan biaya pengiriman adalah {correlation.loc['price', 'freight_value']:.2f}. Korelasi positif yang kuat menunjukkan bahwa produk dengan harga lebih tinggi seringkali memiliki biaya pengiriman yang lebih tinggi.")
+    st.markdown(f"""
+    **Insight:**
+    - Korelasi antara harga produk dan biaya pengiriman adalah **{correlation.loc['price', 'freight_value']:.2f}**.
+    - Korelasi positif yang kuat menunjukkan bahwa produk dengan harga lebih tinggi cenderung memiliki biaya pengiriman yang lebih besar. 
+    - Hal ini bisa jadi disebabkan oleh kebutuhan pengemasan yang lebih baik, ukuran produk yang lebih besar, atau penanganan khusus untuk barang-barang yang lebih mahal.
+    """)
 
 # Distribusi metode pembayaran
 if show_payment_distribution:
@@ -72,7 +77,12 @@ if show_payment_distribution:
     st.pyplot(plt)
 
     # Insight
-    st.markdown("**Insight:** Kartu kredit adalah metode pembayaran yang paling sering digunakan, terutama untuk transaksi bernilai tinggi. Hal ini dapat menjadi pertimbangan untuk strategi promosi.")
+    st.markdown("""
+    **Insight:**
+    - Kartu kredit adalah metode pembayaran yang paling sering digunakan, dengan jumlah transaksi yang jauh lebih tinggi dibanding metode pembayaran lainnya seperti boleto dan voucher.
+    - Dari segi nilai transaksi, kartu kredit juga digunakan untuk pembelian dengan nilai lebih tinggi dibandingkan metode lainnya. Hal ini mengindikasikan bahwa pelanggan cenderung lebih nyaman menggunakan kartu kredit untuk transaksi bernilai besar karena fleksibilitas yang ditawarkan (misalnya, cicilan).
+    - Pemahaman ini dapat digunakan untuk strategi promosi, di mana perusahaan dapat memberikan insentif atau penawaran khusus bagi pengguna kartu kredit untuk meningkatkan pembelian bernilai tinggi.
+    """)
 
 # Menampilkan statistik deskriptif dari dataset
 if st.sidebar.checkbox('Tampilkan Statistik Deskriptif'):
@@ -87,6 +97,6 @@ if st.sidebar.checkbox('Tampilkan Statistik Deskriptif'):
 # Menampilkan kesimpulan
 st.subheader("Kesimpulan")
 st.markdown("""
-1. **Harga Produk vs Biaya Pengiriman:** Terdapat korelasi positif yang kuat antara harga produk dan biaya pengiriman. Hal ini menunjukkan bahwa produk dengan harga lebih tinggi cenderung memiliki biaya pengiriman yang lebih tinggi.
-2. **Preferensi Metode Pembayaran:** Kartu kredit adalah metode pembayaran yang paling sering digunakan, terutama untuk transaksi bernilai tinggi. Strategi promosi dapat menargetkan pelanggan yang menggunakan metode ini.
+1. **Harga Produk vs Biaya Pengiriman:** Terdapat korelasi positif yang kuat antara harga produk dan biaya pengiriman. Produk dengan harga lebih tinggi cenderung memiliki biaya pengiriman yang lebih tinggi, kemungkinan karena faktor seperti ukuran produk atau penanganan khusus.
+2. **Preferensi Metode Pembayaran:** Kartu kredit adalah metode pembayaran yang paling sering digunakan, terutama untuk transaksi bernilai tinggi. Ini menunjukkan bahwa strategi promosi yang ditargetkan pada pengguna kartu kredit dapat meningkatkan pembelian bernilai besar.
 """)
