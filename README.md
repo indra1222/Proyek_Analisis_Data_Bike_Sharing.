@@ -8,11 +8,12 @@ Proyek ini adalah dashboard interaktif yang dikembangkan menggunakan **Streamlit
 - **Nama:** Indra Mauludani Efendi
 - **Email:** [indramauludani09@gmail.com](mailto:indramauludani09@gmail.com)
 - **ID Dicoding:** indramauludani14
-- **Streamlit:** [https://proyeke-commercepublicdataset-tyfvuaglmp7h4i9nyjoiyr.streamlit.app/](https://proyeke-commercepublicdataset-tyfvuaglmp7h4i9nyjoiyr.streamlit.app/)
+- **Streamlit:** [https://indramauludaniefendi.streamlit.app/)
 
 ### Pertanyaan Bisnis
-1. Bagaimana sebaran penjual berdasarkan kota?
-2. Kota dan negara bagian mana yang memiliki jumlah penjual terbanyak?
+1. Apakah terdapat hubungan antara harga produk (price) dan biaya pengiriman (freight_value)?
+2. Bagaimana distribusi metode pembayaran yang digunakan oleh pelanggan, dan apakah metode pembayaran tertentu cenderung digunakan untuk transaksi dengan nilai yang lebih tinggi?
+
 
 ## Fitur Utama
 - **Visualisasi Distribusi Penjual Berdasarkan Kota**: Menggunakan *barplot* untuk menampilkan jumlah penjual per kota.
@@ -75,7 +76,8 @@ proyek_ecommerce/
 ├── Dashboard.py             # File utama aplikasi Streamlit
 ├── README.md              # File ini
 ├── requirements.txt       # Daftar dependensi Python
-└── sellers_dataset.csv/   # Folder untuk menyimpan dataset (opsional)
+└── order_items_dataset.csv    # Folder untuk menyimpan dataset
+└── order_payment_dataset.csv   # Folder untuk menyimpan dataset 
 └── Proyek_Analisis_Data
 ```
 
