@@ -4,8 +4,8 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # Load your cleaned datasets
-order_items_clean = pd.read_csv('order_items_clean.csv')  # Adjust the path to your dataset
-order_payments_clean = pd.read_csv('order_payments_clean.csv')  # Adjust the path to your dataset
+order_items_clean = pd.read_csv('order_items_dataset.csv')  # Adjust the path to your dataset
+order_payments_clean = pd.read_csv('order_payments_dataset.csv')  # Adjust the path to your dataset
 
 # Title of the app
 st.title('E-commerce Data Analysis')
